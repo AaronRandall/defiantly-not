@@ -1,6 +1,10 @@
 {
   "name": "starling-twitterfall",
   "version": "0.0.1",
+  "engines": {
+    "node": "0.8.16",
+    "npm":  "1.1.69"
+  }
   "dependencies": {
     "socket.io": "0.8.4",
     "twitter": "0.1.18",
