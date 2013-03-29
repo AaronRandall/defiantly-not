@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
   
   script_url = 'http://localhost';
   if(process.env.PORT) {
-    script_url = 'http://tweetstream.herokuapp.com';
+    script_url = 'http://defiantly-not.herokuapp.com';
   }
   
   res.render(__dirname + '/public/index.html', {
