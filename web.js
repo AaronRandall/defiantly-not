@@ -1,3 +1,10 @@
+var cluster = require('cluster')
+
+if ( cluster.isMaster ) {
+  for ( var i=0; i<2; ++i )
+      cluster.fork();
+      } else {
+
 var express = require('express');
 var sys = require('sys');
 var twitter = require('twitter');
@@ -62,3 +69,5 @@ app.get('/timeago.js', function (req, res) {
 
 var fs = require('fs');
 eval(fs.readFileSync('credentials.js')+'');
+
+}
