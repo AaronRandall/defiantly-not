@@ -32,9 +32,6 @@ app.get('/', function (req, res) {
   });
   
   var query = "defiantly";
-  if(req.query["q"]) {
-    query = req.query["q"];
-  }
   
   io.sockets.on('connection', function (socket) { 
     twit.stream('user', {track: query}, function(stream) {

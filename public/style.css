@@ -1,14 +1,14 @@
 body {
-    margin: 26px 30px 30px 30px;
-    font-family: 'Helvetica Neue', sans-serif;
+  margin: 26px 30px 30px 30px;
+  font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 200;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
-	background: #073642;
-	color: #879DA3;
+	background: #fdfdfd;
+	color: black;
 	word-wrap: break-word;
 }
 
@@ -29,19 +29,20 @@ p {
 }
 
 #container {
-	font-size: 70px;
+	font-size: 55px;
 }
 
 .clearboth {
-    clear: both;
+  clear: both;
 }
 
 #tweet {
-    line-height: 1.2;
-	text-shadow: 0px 2px #002b36;
+  line-height: 1.2;
+	/*text-shadow: 0px 2px #002b36;*/
 }
 
 .pending {
+  display: none;
 	opacity: 0.3;
 	position: absolute;
 	bottom: 30px;
@@ -50,6 +51,7 @@ p {
 }
 
 .evicted {
+  display: none;
 	opacity: 0.1;
 	position: absolute;
 	bottom: 48px;
@@ -59,27 +61,28 @@ p {
 
 
 .username {
-	color: #b58900;
 }
 
 .hashtag {
-	color: #2aa198;
 }
 
 .link {
-	color: #268bd2;
+}
+
+.defiantly {
+  font-size: 65px;
 }
 
 .screen_name {
 	color: #586e75 !important;
-	font-size: 50px;
+	font-size: 30px;
 	clear: left;
 }
 
 .time_since {
 	font-weight: 100;
 	color: #586e75 !important;
-	font-size: 50px;
+	font-size: 30px;
 	clear: left;
 	opacity: 0.4;
 }

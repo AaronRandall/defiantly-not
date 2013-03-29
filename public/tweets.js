@@ -30,6 +30,9 @@ function populateTweet(data) {
     } else if(isUrl($(this).text())) {
       t = $(this).text().replace(re, '<span class="link">$1</span>')
       $(this).html(t);
+    } else if($(this).text().toLowerCase() == "defiantly") {
+      t = '<span class="defiantly">defiantly</span>'
+      $(this).html(t);
     }
     $(this).delay(10 * i).fadeIn(100);
   });
@@ -42,7 +45,6 @@ function clearAndPopulateNextTweet(data) {
     $($("#tweet span").get().reverse()).each(function(i) { 
       $(this).delay(10 * i).fadeOut(150, function() { 
         $(this).remove();
-        console.log($("#tweet span").length == 0)
         if($("#tweet span").length == 0) {
           setTimeout(function() {
             populateTweet(data);
