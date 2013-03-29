@@ -29,7 +29,7 @@ p {
 }
 
 #container {
-	font-size: 55px;
+	font-size: 4.5em;
 }
 
 .clearboth {
@@ -70,7 +70,7 @@ p {
 }
 
 .defiantly {
-  font-size: 65px;
+  font-style: italic;
 }
 
 .screen_name {
