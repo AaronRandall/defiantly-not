@@ -11,7 +11,16 @@ app.set("view options", { layout: false });
 app.listen(process.env.PORT || 3000);
 
 var io = require('socket.io').listen(app);
-io.set('transports', ['xhr-polling']); io.set('polling duration', 10);
+
+// Heroku won't actually allow us to use WebSockets
+// so we have to setup polling instead.
+// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
+//io.set('transports', ['xhr-polling']); io.set('polling duration', 10);
 
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function (str){
