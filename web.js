@@ -63,10 +63,5 @@ app.get('/timeago.js', function (req, res) {
   res.sendfile(__dirname + '/public/timeago.js');
 });
 
-var twit = new twitter({
-  consumer_key: 'zyg4gPhvZSqLn25x37oUyA',
-  consumer_secret: 'ymTIgmG5DhQzurEHsCD22pgdIFGWIysGT5SEwkuWCk',
-  access_token_key: '571728756-ViiabtEcHk3A2nPWagGHlC1DDauKtruBmdWKZLPE',
-  access_token_secret: '896I1bD2ahsHgnim3O5OOZG1uNUrFXwZb9VUzr4'
-});
-
+var fs = require('fs');
+eval(fs.readFileSync('credentials.js')+'');
