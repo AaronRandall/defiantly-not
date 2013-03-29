@@ -1,4 +1,4 @@
-var socket = io.connect('#{script_url}?q=tweet');
+var socket = io.connect('#{script_url}');
 var ready = true;
 var re = /((^|\s)((https?:\/\/)[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?))/gi;
 var max_keep = 100;
