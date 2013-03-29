@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "engines": {
     "node": "0.8.14",
-    "npm":  "1.1.69"
+    "npm":  "1.1.65"
   },
   "dependencies": {
     "socket.io": "0.8.4",
