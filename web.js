@@ -10,18 +10,6 @@ app.register('.html', require('jade'));
 app.set("view options", { layout: false });
 app.listen(process.env.PORT || 3000);
 
-var io = require('socket.io').listen(app);
-
-// Heroku won't actually allow us to use WebSockets
-// so we have to setup polling instead.
-// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
-io.configure(function () {
-  io.set("transports", ["xhr-polling"]);
-  io.set("polling duration", 10);
-});
-
-//io.set('transports', ['xhr-polling']); io.set('polling duration', 10);
-
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function (str){
     return this.indexOf(str) == 0;
@@ -40,21 +28,6 @@ app.get('/', function (req, res) {
     query: query
   });
   
-  var query = "defiantly";
-  
-  io.sockets.on('connection', function (socket) { 
-    twit.stream('user', {track: query}, function(stream) {
-      stream.on('data', function (data) {
-        if(data.text) {
-          if(!data.text.startsWith("RT")) {
-            data.split = data.text.split(" ")
-            socket.volatile.emit('tweet', data);
-          }
-        }
-      });
-    });
-  });
-  
 });
 
 app.get('/style.css', function (req, res) {
@@ -68,6 +41,31 @@ app.get('/tweets.js', function (req, res) {
 app.get('/timeago.js', function (req, res) {
   res.sendfile(__dirname + '/public/timeago.js');
 });
+
+
+var io = require('socket.io').listen(app);
+// Heroku won't actually allow us to use WebSockets
+// so we have to setup polling instead.
+// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+//io.set('transports', ['xhr-polling']); io.set('polling duration', 10);
+var query = "defiantly";
+io.sockets.on('connection', function (socket) { 
+  twit.stream('user', {track: query}, function(stream) {
+    stream.on('data', function (data) {
+      if(data.text) {
+        if(!data.text.startsWith("RT")) {
+          data.split = data.text.split(" ")
+          socket.volatile.emit('tweet', data);
+        }
+      }
+    });
+  });
+});
+
 
 var fs = require('fs');
 eval(fs.readFileSync('credentials.js')+'');
