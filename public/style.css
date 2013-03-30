@@ -125,9 +125,14 @@ p {
 }
 
 @media only screen and (max-width:600px) {
+    #loading span {
+      line-height: 20px;
+      font-size: 30px; 
+    }
+
     #container {
         width: 100%;
-        font-size: 13px;
+        font-size: 30px;
     }
     #tweets .tweet {
         width: 90%;
