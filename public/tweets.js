@@ -10,6 +10,7 @@ var startup = true;
 var tweets = new Array();
 var display_for_ms = 5500;
 var total = 0;
+var loadingFeedbackSetIntervalId = 0;
 
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function (str){
@@ -123,9 +124,25 @@ function getRandomDiss() {
 
 function hideLoadingPanel() {
   $("#loading").fadeOut();
+  cancelLoadingFeedback();
 }
 
-console.log('page load');
+function animateLoadingFeedback() {
+  if($('#loading-feedback').text().length < 3) {
+    $('<span>.</span>').hide().appendTo('#loading-feedback').fadeIn();
+//   $('#loading-feedback').append('<span>.</span>').hide().fadeIn();
+  } else {
+    $('#loading-feedback').animate({opacity:0},function(){
+      $(this).text("").animate({opacity:1});
+    });
+  }
+}
+
+function cancelLoadingFeedback() {
+  clearInterval(loadingFeedbackSetIntervalId);
+}
+
 $(document).ready(function() {
   console.log("document read");
+  loadingFeedbackSetIntervalId = setInterval(animateLoadingFeedback, 600);
 });

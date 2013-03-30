@@ -11,7 +11,8 @@ html(lang="en")
     script(type='text/javascript', src='/tweets.js')
   body
     #loading
-      span Waiting for someone to say it...
+      span Waiting for someone to say it
+      span#loading-feedback
     #container
       .content 
         p.pending
@@ -24,3 +25,5 @@ html(lang="en")
           span#evicted_tweet
         div#tweet
         .clearboth 
+    #credits
+      span By <a href="https://twitter.com/AaronJRandall" >@aaronjrandall</a>
