@@ -144,29 +144,29 @@ p {
 }
 
 @media only screen and (max-width:600px) {
-    #loading span {
-      line-height: 10px;
-      font-size: 40px; 
-    }
+  #loading {
+    line-height: 1em;
+    font-size: 50px; 
+  }
 
-    #container {
-        width: 100%;
-        font-size: 30px;
-    }
-    #tweets .tweet {
-        width: 90%;
-        padding: 3% 5%;
-    }
-    
-    .tweet_image {
-        padding: 0;
-        width: 20%;
-        margin: 0;
-        float: left;
-    }
-    
-    .tweet_text {
-        padding: 0;
-        width: 80%;
-    }
+  #container {
+    width: 100%;
+    font-size: 30px;
+  }
+  #tweets .tweet {
+    width: 90%;
+    padding: 3% 5%;
+  }
+
+  .tweet_image {
+    padding: 0;
+    width: 20%;
+    margin: 0;
+    float: left;
+  }
+
+  .tweet_text {
+    padding: 0;
+    width: 80%;
+  }
 }

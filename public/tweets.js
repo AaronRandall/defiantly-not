@@ -35,8 +35,8 @@ function populateTweet(data) {
     } else if(isUrl($(this).text())) {
       t = $(this).text().replace(re, '<span class="link">$1</span>')
       $(this).html(t);
-    } else if($(this).text().toLowerCase() == "defiantly") {
-      t = '<span class="defiantly">defiantly</span>'
+    } else if($(this).text().toLowerCase().search("defiantly") == 0 {
+      t = '<span class="defiantly">' + $(this).text() + '</span>'
       $(this).html(t);
     }
     $(this).delay(10 * i).fadeIn(100);
