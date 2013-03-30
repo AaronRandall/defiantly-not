@@ -22,7 +22,7 @@ function isUrl(s) {
 }
 
 function populateTweet(data) {
-  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + '</span> <span class="time_since">' + jQuery.timeago(data.created_at) + '</span>';
+  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + getRandomDiss() + '</span> <span class="time_since">' + jQuery.timeago(data.created_at) + '</span>';
   $('#tweet').html("");
   $(spans).hide().appendTo('#tweet').each(function(i) {
     if($(this).text().startsWith("@") && !$(this).hasClass('screen_name')) {
@@ -88,6 +88,38 @@ socket.on('tweet', function (data) {
     $("#number").html(tweets.length);
   }
 });
+
+function getRandomDiss() {
+  var randomNum = Math.floor(Math.random()*9);
+  var diss = "didn't listen in school.";
+
+  switch(randomNum)
+  {
+  case 1:
+    diss = "didn't listen in school.";
+    break;
+  case 2:
+    diss = "always hated English.";
+    break;
+  case 3:
+    diss = "has given up fighting with autocorrect.";
+    break;
+  case 4:
+    diss = "ROFLomGz lolZ! x x";
+    break;
+  case 5:
+    diss = "couldn't care less.";
+    break;
+  case 6:
+    diss = "isn't a pretentious Grammar Nazi.";
+    break;
+  case 8:
+    diss = "loves that album by Oasis, 'Defiantly Maybe'.";
+    break;
+  }
+
+  return diss;
+}
 
 function hideLoadingPanel() {
   $("#loading").fadeOut();
