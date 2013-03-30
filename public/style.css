@@ -10,25 +10,26 @@ body {
 	background: #fdfdfd;
 	color: black;
 	word-wrap: break-word;
+  line-height: 1.2em;
 }
 
 h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-    font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
 }
 
-a:link    {color:black;}
-a:visited {color:black;}
-a:hover   {color:black;}
-a:active  {color:black;}
+a:link    {color:#586e75;}
+a:visited {color:#586e75;}
+a:hover   {color:#586e75;}
+a:active  {color:#586e75;}
 
 #tweets span {
 	float: left;
 }
 
 p {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 #container {
@@ -48,6 +49,8 @@ p {
   bottom:0;
   width:100%;
   height:60px;
+	font-weight: 200;
+	color: #586e75 !important;
 }
 
 .pending {

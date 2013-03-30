@@ -96,6 +96,9 @@ function getRandomDiss() {
 
   switch(randomNum)
   {
+  case 0:
+    diss = "thinks this website is mean.";
+    break;
   case 1:
     diss = "didn't listen in school.";
     break;
@@ -106,7 +109,7 @@ function getRandomDiss() {
     diss = "has given up fighting with autocorrect.";
     break;
   case 4:
-    diss = "ROFLomGz lolZ! x x";
+    diss = "... like ROFLomGz lolZ! x x";
     break;
   case 5:
     diss = "couldn't care less.";
@@ -130,7 +133,6 @@ function hideLoadingPanel() {
 function animateLoadingFeedback() {
   if($('#loading-feedback').text().length < 3) {
     $('<span>.</span>').hide().appendTo('#loading-feedback').fadeIn();
-//   $('#loading-feedback').append('<span>.</span>').hide().fadeIn();
   } else {
     $('#loading-feedback').animate({opacity:0},function(){
       $(this).text("").animate({opacity:1});
@@ -143,6 +145,5 @@ function cancelLoadingFeedback() {
 }
 
 $(document).ready(function() {
-  console.log("document read");
   loadingFeedbackSetIntervalId = setInterval(animateLoadingFeedback, 600);
 });
