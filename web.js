@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
   
   res.render(__dirname + '/public/index.html', {
     script_url: script_url,
-    query: query
+    query: 'defiantly'
   });
   
 });
