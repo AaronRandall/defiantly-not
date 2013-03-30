@@ -54,6 +54,7 @@ io.configure(function () {
 //io.set('transports', ['xhr-polling']); io.set('polling duration', 10);
 var query = "defiantly";
 io.sockets.on('connection', function (socket) { 
+  console.log('STARTING SOCKET CONNECTION');
   twit.stream('user', {track: query}, function(stream) {
     stream.on('data', function (data) {
       if(data.text) {
@@ -63,6 +64,9 @@ io.sockets.on('connection', function (socket) {
         }
       }
     });
+  });
+  socket.on('disconnect', function () {
+    console.log('SOCKET DISCONNECTED');
   });
 });
 

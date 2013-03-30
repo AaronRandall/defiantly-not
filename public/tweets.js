@@ -1,4 +1,8 @@
-var socket = io.connect('#{script_url}');
+var socket = io.connect('#{script_url}', {
+  'reconnect': true,
+  'reconnection delay': 500,
+  'max reconnection attempts': 10
+});
 var ready = true;
 var re = /((^|\s)((https?:\/\/)[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?))/gi;
 var max_keep = 100;
