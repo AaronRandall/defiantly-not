@@ -72,6 +72,7 @@ function showNextTweet() {
 
 socket.on('tweet', function (data) {
   console.log('socket tweet function');
+  hideLoadingPanel();
   $("#total_number").html(total++);
   if(data.text) {
     tweets.push(data);
@@ -88,7 +89,11 @@ socket.on('tweet', function (data) {
   }
 });
 
+function hideLoadingPanel() {
+  $("#loading").fadeOut();
+}
+
 console.log('page load');
 $(document).ready(function() {
   console.log("document read");
-  });
+});
