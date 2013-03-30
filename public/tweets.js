@@ -1,4 +1,4 @@
-var socket = io.connect('#{script_url}', {
+var socket = io.connect('http://defiantly-not-daemon.herokuapp.com/', {
   'reconnect': true,
   'reconnection delay': 500,
   'max reconnection attempts': 10
