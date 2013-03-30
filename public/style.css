@@ -129,12 +129,18 @@ p {
   text-align:center;
 	font-size: 3.5em;
   left: 0;
-  line-height: 200px;
+  line-height: 60px;
   margin: auto;
   margin-top: -100px;
   position: absolute;
   top: 45%;
   width: 100%;
+}
+
+#loading-description {
+  font-weight: 100;
+  font-size: 0.5em;
+  padding-right: 50px;
 }
 
 #loading-feedback {
@@ -147,6 +153,11 @@ p {
   #loading {
     line-height: 1em;
     font-size: 50px; 
+  }
+
+  #loading-description {
+    line-height: 1em;
+    padding-left: 50px;
   }
 
   #container {
