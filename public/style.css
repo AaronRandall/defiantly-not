@@ -163,7 +163,8 @@ and (max-device-width : 1024px) {
 
   #credits {
     font-family: "HelveticaNeue-UltraLight";
-    height: 110px;
+    font-size: 13px;
+    height: 70px;
   }
 
   #container {

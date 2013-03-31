@@ -27,7 +27,7 @@ function populateTweet(data) {
   // If the current browser isn't timeago compatible, make it up until I find a fix :) (currently only IE)
   if (timeAgo == "NaN years ago") { timeAgo = "less than a minute ago"; }
 
-  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + getRandomDiss() + '</span> <span class="time_since">' + jQuery.timeago(data.created_at) + '</span>';
+  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + getRandomDiss() + '</span> <span class="time_since">' + timeAgo + '</span>';
   $('#tweet').html("");
   $(spans).hide().appendTo('#tweet').each(function(i) {
     if($(this).text().startsWith("@") && !$(this).hasClass('screen_name')) {
