@@ -15,11 +15,11 @@ body {
 
 @font-face {
 font-family: 'Helvetica Neue';
-src: url('public/fonts/helveticaneue-webfont.eot');
-src: url('public/fonts/helveticaneue-webfont.eot?#iefix') format('embedded-opentype'),
-     url('public/fonts/helveticaneue-webfont.woff') format('woff'),
-     url('public/fonts/helveticaneue-webfont.ttf') format('truetype'),
-     url('public/fonts/helveticaneue-webfont.svg#Helvetica Neue') format('svg');
+src: url('hv.eot');
+src: url('hv.eot?#iefix') format('embedded-opentype'),
+     url('hv.woff') format('woff'),
+     url('hv.ttf') format('truetype'),
+     url('hv.svg#Helvetica Neue') format('svg');
 }
 
 h1, h2, h3, p {
