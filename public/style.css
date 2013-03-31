@@ -1,6 +1,6 @@
 body {
   margin: 26px 30px 30px 30px;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 200;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -11,6 +11,15 @@ body {
 	color: black;
 	word-wrap: break-word;
   line-height: 1.2em;
+}
+
+@font-face {
+font-family: 'Helvetica Neue';
+src: url('public/fonts/helveticaneue-webfont.eot');
+src: url('public/fonts/helveticaneue-webfont.eot?#iefix') format('embedded-opentype'),
+     url('public/fonts/helveticaneue-webfont.woff') format('woff'),
+     url('public/fonts/helveticaneue-webfont.ttf') format('truetype'),
+     url('public/fonts/helveticaneue-webfont.svg#Helvetica Neue') format('svg');
 }
 
 h1, h2, h3, p {
