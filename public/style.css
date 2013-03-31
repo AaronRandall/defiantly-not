@@ -1,3 +1,12 @@
+@font-face {
+font-family: 'Helvetica Neue';
+src: url('hv.eot');
+src: url('hv.eot?#iefix') format('embedded-opentype'),
+     url('hv.woff') format('woff'),
+     url('hv.ttf') format('truetype'),
+     url('hv.svg#Helvetica Neue') format('svg');
+}
+
 body {
   margin: 26px 30px 30px 30px;
   font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -11,15 +20,6 @@ body {
 	color: black;
 	word-wrap: break-word;
   line-height: 1.2em;
-}
-
-@font-face {
-font-family: 'Helvetica Neue';
-src: url('hv.eot');
-src: url('hv.eot?#iefix') format('embedded-opentype'),
-     url('hv.woff') format('woff'),
-     url('hv.ttf') format('truetype'),
-     url('hv.svg#Helvetica Neue') format('svg');
 }
 
 h1, h2, h3, p {
