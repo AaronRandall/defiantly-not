@@ -169,7 +169,17 @@ and (max-device-width : 1024px) {
   #container {
     padding-top:0px;
     margin-top: 10px;
-    font-size: 35px;
+    font-size: 40px;
+  }
+
+  .screen_name {
+    font-size: 20px;
+    line-height: 10px;
+  }
+
+  .time_since {
+    font-size: 20px;
+    line-height: 10px;
   }
 }
 
