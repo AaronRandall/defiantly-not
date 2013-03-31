@@ -177,7 +177,7 @@ p {
 
   #container {
     width: 100%;
-    font-size: 30px;
+    font-size: 35px;
   }
   #tweets .tweet {
     width: 90%;
@@ -186,10 +186,12 @@ p {
 
   .screen_name {
     font-size: 20px;
+    line-height: 10px;
   }
 
   .time_since {
     font-size: 20px;
+    line-height: 10px;
   }
 
   .tweet_image {
