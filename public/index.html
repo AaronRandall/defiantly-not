@@ -2,15 +2,18 @@
 html(lang="en")
   head
     title Defiantly Not
-    meta(name='description', content='Defiantly vs Definitely. You're doing it wrong.')
+    meta(name='description', content='Defiantly vs Definitely: You're doing it wrong. A real-time Twitter stream of people trying and failing to write the word "definitely".')
     meta(name='viewport', content='width=device-width,user-scalable=no')
     link(href='http://fonts.googleapis.com/css?family=Nobile', rel='stylesheet', type='text/css')
     link(href='/style.css', rel='stylesheet', type='text/css')
+    script
+      var script_url='#{script_url}'
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     script(type='text/javascript', src='/timeago.js')
     script(type='text/javascript', src='http://defiantly-not-daemon.herokuapp.com/socket.io/socket.io.js')
     script(type='text/javascript', src='/tweets.js')
   body
+
     #loading
       span Searching Twitter
       span#loading-feedback
@@ -29,8 +32,8 @@ html(lang="en")
         div#tweet
         .clearboth 
     #credits
-      div By <a href="https://twitter.com/AaronJRandall" >@aaronjrandall</a>
-      div Using <a href="http://nodejs.org/">node.js</a>, <a href="http://socket.io/">socket.io</a>, and code from <a href="https://github.com/samstarling/tweetstream">Tweetstream</a>
+      div.description A real-time Twitter stream of people trying (and failing) to write the word "definitely".
+      div.by By <a href="https://twitter.com/AaronJRandall" >@aaronjrandall</a>. Using <a href="http://nodejs.org/">node.js</a>, <a href="http://socket.io/">socket.io</a> &amp; <a href="https://github.com/samstarling/tweetstream">Tweetstream</a>.
 
   script
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

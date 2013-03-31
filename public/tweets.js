@@ -1,4 +1,4 @@
-var socket = io.connect('http://defiantly-not-daemon.herokuapp.com/', {
+var socket = io.connect(script_url, {
   'reconnect': true,
   'reconnection delay': 500,
   'max reconnection attempts': 10
@@ -39,7 +39,7 @@ function populateTweet(data) {
       t = '<span class="defiantly">' + $(this).text() + '</span>'
       $(this).html(t);
     }
-    $(this).delay(10 * i).fadeIn(100);
+    $(this).delay(10 * i).fadeIn(200);
   });
 }
 
@@ -72,7 +72,6 @@ function showNextTweet() {
 }
 
 socket.on('tweet', function (data) {
-  console.log('socket tweet function');
   hideLoadingPanel();
   $("#total_number").html(total++);
   if(data.text) {
@@ -91,7 +90,7 @@ socket.on('tweet', function (data) {
 });
 
 function getRandomDiss() {
-  var randomNum = Math.floor(Math.random()*9);
+  var randomNum = Math.floor(Math.random()*8);
   var diss = "didn't listen in school.";
 
   switch(randomNum)
@@ -106,19 +105,16 @@ function getRandomDiss() {
     diss = "always hated English.";
     break;
   case 3:
-    diss = "has given up fighting with autocorrect.";
+    diss = "gave up fighting with autocorrect.";
     break;
   case 4:
-    diss = "... like ROFLomGz lolZ! x x";
+    diss = "... like, ROFLomGz lolZ! xx";
     break;
   case 5:
     diss = "couldn't care less.";
     break;
   case 6:
     diss = "isn't a pretentious Grammar Nazi.";
-    break;
-  case 8:
-    diss = "loves that album by Oasis, 'Defiantly Maybe'.";
     break;
   }
 

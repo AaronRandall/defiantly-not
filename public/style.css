@@ -41,17 +41,23 @@ p {
 }
 
 #tweet {
-  line-height: 1.2;
+  line-height: 1.2em;
 }
 
 #credits {
   position:absolute;
   bottom:0;
   width:100%;
-  height:60px;
+  height:90px;
 	font-weight: 100;
-  font-size: 16px;
+  font-size: 18px;
 	color: #586e75;
+  line-height: 2em;
+  background-color: #fdfdfd;
+}
+
+#credits .description {
+  font-size: 1.5em;
 }
 
 .pending {
@@ -72,16 +78,6 @@ p {
 	line-height: 12px;
 }
 
-
-.username {
-}
-
-.hashtag {
-}
-
-.link {
-}
-
 .defiantly {
   font-style: italic;
 }
@@ -98,6 +94,7 @@ p {
 	font-size: 30px;
 	clear: left;
 	opacity: 0.4;
+  line-height: 0.8em!important;
 }
 
 #tweets .tweet {
@@ -154,13 +151,13 @@ p {
     font-size: 10px;
     line-height: 10px;
     padding: 0px;
-    margin: 0px;
+    margin: 10px 10px 0px 10px;
   }
 
   #credits {
     font-size: 10px;
-    padding-left: 10px;
-    height: 30px;
+    height: 70px;
+    width: 380px;
   }
 
   #loading {
@@ -176,9 +173,12 @@ p {
   }
 
   #container {
+    padding-top:0px;
+    margin-top: 10px;
     width: 100%;
-    font-size: 35px;
+    font-size: 30px;
   }
+
   #tweets .tweet {
     width: 90%;
     padding: 3% 5%;

@@ -2,6 +2,7 @@ var express = require('express');
 var sys = require('sys');
 var twitter = require('twitter');
 var logging = require('node-logging');
+var script_url = 'http://defiantly-not-daemon.herokuapp.com';
 
 logging.setLevel('error');
 
@@ -18,15 +19,15 @@ if (typeof String.prototype.startsWith != 'function') {
 
 app.get('/', function (req, res) {
   
-  script_url = 'http://localhost';
-  if(process.env.PORT) {
-    script_url = 'http://defiantly-not-daemon.herokuapp.com';
+  if(!process.env.PORT) {
+    script_url = 'http://localhost:3001';
   }
   
-  res.render(__dirname + '/public/index.html', {
-    script_url: script_url,
-    query: 'defiantly'
-  });
+  console.log("calling render with: " + script_url);
+
+  res.render(__dirname + '/public/index.html', { locals:{
+    script_url: script_url
+  }});
   
 });
 
