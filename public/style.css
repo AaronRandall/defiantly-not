@@ -165,6 +165,12 @@ and (max-device-width : 1024px) {
     font-family: "HelveticaNeue-UltraLight";
     height: 110px;
   }
+
+  #container {
+    padding-top:0px;
+    margin-top: 10px;
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width:600px) {
