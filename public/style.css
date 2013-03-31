@@ -1,15 +1,6 @@
-@font-face {
-font-family: 'Helvetica Neue';
-src: url('hv.eot');
-src: url('hv.eot?#iefix') format('embedded-opentype'),
-     url('hv.woff') format('woff'),
-     url('hv.ttf') format('truetype'),
-     url('hv.svg#Helvetica Neue') format('svg');
-}
-
 body {
   margin: 26px 30px 30px 30px;
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 200;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -56,7 +47,6 @@ p {
 #credits {
   position:absolute;
   bottom:0;
-  width:100%;
   height:90px;
 	font-weight: 100;
   font-size: 18px;
@@ -155,17 +145,42 @@ p {
   text-align: left;
 }
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  body {
+    font-weight: 100;
+    font-family: "Helvetica Neue", "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  #loading {
+
+  }
+
+  #loading-description {
+    font-family: "HelveticaNeue-UltraLight";
+  }
+
+  #credits {
+    font-family: "HelveticaNeue-UltraLight";
+    height: 110px;
+  }
+}
+
 @media only screen and (max-width:600px) {
   body {
     font-size: 10px;
     line-height: 10px;
     padding: 0px;
     margin: 10px 10px 0px 10px;
+    font-weight: 100;
+    font-family: "Helvetica Neue", "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; 
   }
 
   #credits {
-    font-size: 10px;
-    height: 70px;
+    font-family: "HelveticaNeue-UltraLight";
+    font-size: 12px;
+    height: 75px;
   }
 
   #loading {
@@ -174,8 +189,9 @@ p {
   }
 
   #loading-description {
+    font-family: "HelveticaNeue-UltraLight";
     line-height: 1em;
-    font-size: 20px;
+    font-size: 35px;
     padding: 0px;
     padding-top: 10px;
   }

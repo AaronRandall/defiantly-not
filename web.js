@@ -42,16 +42,3 @@ app.get('/tweets.js', function (req, res) {
 app.get('/timeago.js', function (req, res) {
   res.sendfile(__dirname + '/public/timeago.js');
 });
-
-app.get('/hv.eot', function (req, res) {
-  res.sendfile(__dirname + '/public/fonts/helveticaneue-webfont.eot');
-});
-app.get('/hv.svg', function (req, res) {
-  res.sendfile(__dirname + '/public/fonts/helveticaneue-webfont.svg');
-});
-app.get('/hv.ttf', function (req, res) {
-  res.sendfile(__dirname + '/public/fonts/helveticaneue-webfont.ttf');
-});
-app.get('/hv.woff', function (req, res) {
-  res.sendfile(__dirname + '/public/fonts/helveticaneue-webfont.woff');
-});
