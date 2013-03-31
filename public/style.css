@@ -182,6 +182,10 @@ and (max-device-width : 1024px) {
     font-size: 20px;
     line-height: 10px;
   }
+
+  .time_since {
+    font-family: "HelveticaNeue-UltraLight";
+  }
 }
 
 @media only screen and (max-width:600px) {

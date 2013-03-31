@@ -94,7 +94,7 @@ socket.on('tweet', function (data) {
 });
 
 function getRandomDiss() {
-  var randomNum = Math.floor(Math.random()*8);
+  var randomNum = Math.floor(Math.random()*7);
   var diss = "didn't listen in school.";
 
   switch(randomNum)
@@ -118,7 +118,7 @@ function getRandomDiss() {
     diss = "couldn't care less.";
     break;
   case 6:
-    diss = "isn't a pretentious Grammar Nazi.";
+    diss = "maybe meant definitely?";
     break;
   }
 
