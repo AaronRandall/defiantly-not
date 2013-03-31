@@ -169,7 +169,7 @@ and (max-device-width : 1024px) {
   #container {
     padding-top:0px;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 
@@ -206,7 +206,7 @@ and (max-device-width : 1024px) {
     padding-top:0px;
     margin-top: 10px;
     width: 100%;
-    font-size: 30px;
+    font-size: 26px;
   }
 
   #tweets .tweet {
