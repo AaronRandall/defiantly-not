@@ -7,6 +7,7 @@ var script_url = 'http://defiantly-not-daemon.herokuapp.com';
 logging.setLevel('error');
 
 var app = express.createServer();
+app.use(express.favicon(__dirname + '/public/favicon.ico'));
 app.register('.html', require('jade'));
 app.set("view options", { layout: false });
 app.listen(process.env.PORT || 3000);
