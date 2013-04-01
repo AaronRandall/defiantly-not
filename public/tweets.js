@@ -43,7 +43,10 @@ function populateTweet(data) {
       t = '<span class="defiantly">' + $(this).text() + '</span>'
       $(this).html(t);
     }
-    $(this).delay(10 * i).fadeIn(200);
+    $(this).delay(10 * i).fadeIn(200, function() {
+      // Firefox requires this to keep spans from being blocks
+      $(this).css('display','inline-block');
+    });
   });
 }
 
@@ -136,7 +139,8 @@ function hideLoadingPanel() {
 
 function animateLoadingFeedback() {
   if($('#loading-feedback').text().length < 3) {
-    $('<span>.</span>').hide().appendTo('#loading-feedback').fadeIn();
+    // Firefox requires the css at the end to keep spans from being blocks
+    $('<span id="loading-bullet">.</span>').hide().appendTo('#loading-feedback').fadeIn().css('display','inline-block');
   } else {
     $('#loading-feedback').animate({opacity:0},function(){
       $(this).text("").animate({opacity:1});
