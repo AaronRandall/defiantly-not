@@ -175,12 +175,12 @@ and (max-device-width : 1024px) {
 
   .screen_name {
     font-size: 20px;
-    line-height: 10px;
+    line-height: 20px;
   }
 
   .time_since {
     font-size: 20px;
-    line-height: 10px;
+    line-height: 20px;
   }
 
   .time_since {
@@ -231,12 +231,12 @@ and (max-device-width : 1024px) {
 
   .screen_name {
     font-size: 20px;
-    line-height: 10px;
+    line-height: 20px;
   }
 
   .time_since {
     font-size: 20px;
-    line-height: 10px;
+    line-height: 20px;
     font-family: "HelveticaNeue-UltraLight";
   }
 
