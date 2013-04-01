@@ -230,8 +230,9 @@ and (max-device-width : 1024px) {
   }
 
   .screen_name {
+    padding-top: 5px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 25px;
   }
 
   .time_since {
