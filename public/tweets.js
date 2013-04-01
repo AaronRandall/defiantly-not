@@ -27,7 +27,13 @@ function populateTweet(data) {
   // If the current browser isn't timeago compatible, make it up until I find a fix :) (currently only IE)
   if (timeAgo == "NaN years ago") { timeAgo = "less than a minute ago"; }
 
-  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + getRandomDiss() + '</span> <span class="time_since">' + timeAgo + '</span>';
+  // Check to see if the tweet contains definitely AND defiantly. The person is probably tweeting what I'm thinking
+  var diss = getRandomDiss();
+  if ((data.text.toLowerCase().search("defiantly") >= 0) && (data.text.toLowerCase().search("definitely") >= 0)) {
+    diss = "understands why I built this site!";
+  }  
+
+  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + diss + '</span> <span class="time_since">' + timeAgo + '</span>';
   $('#tweet').html("");
   $(spans).hide().appendTo('#tweet').each(function(i) {
     if($(this).text().startsWith("@") && !$(this).hasClass('screen_name')) {
@@ -39,7 +45,7 @@ function populateTweet(data) {
     } else if(isUrl($(this).text())) {
       t = $(this).text().replace(re, '<span class="link">$1</span>')
       $(this).html(t);
-    } else if($(this).text().toLowerCase().search("defiantly") == 0) {
+    } else if($(this).text().toLowerCase().search("defiantly") >= 0) {
       t = '<span class="defiantly">' + $(this).text() + '</span>'
       $(this).html(t);
     }
@@ -121,7 +127,7 @@ function getRandomDiss() {
     diss = "couldn't care less.";
     break;
   case 6:
-    diss = "maybe meant definitely?";
+    diss = "maybe meant 'definitely'?";
     break;
   }
 
