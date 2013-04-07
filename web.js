@@ -1,6 +1,5 @@
 var express = require('express');
 var sys = require('sys');
-var twitter = require('twitter');
 var logging = require('node-logging');
 var script_url = 'http://defiantly-not-daemon.herokuapp.com';
 
