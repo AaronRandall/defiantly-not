@@ -134,10 +134,6 @@ function getRandomDiss() {
   return diss;
 }
 
-function showLoadingPanel() {
-  clearInterval(loadingFeedbackSetIntervalId);
-}
-
 function hideLoadingPanel() {
   $("#loading").fadeOut();
   cancelLoadingFeedback();
@@ -155,7 +151,7 @@ function animateLoadingFeedback() {
 }
 
 function cancelLoadingFeedback() {
-  showLoadingPanel();
+  clearInterval(loadingFeedbackSetIntervalId);
 }
 
 $(document).ready(function() {

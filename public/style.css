@@ -47,16 +47,20 @@ p {
 #credits {
   position:absolute;
   bottom:0;
-  height:90px;
+  height:105px;
 	font-weight: 100;
   font-size: 18px;
 	color: #586e75;
-  line-height: 2em;
+  line-height: 1.5em;
   background-color: #fdfdfd;
 }
 
 #credits .description {
   font-size: 1.5em;
+}
+
+#facebook-iframe {
+  padding-top: 5px;
 }
 
 .pending {
@@ -164,7 +168,7 @@ and (max-device-width : 1024px) {
   #credits {
     font-family: "HelveticaNeue-UltraLight";
     font-size: 13px;
-    height: 70px;
+    height: 60px;
   }
 
   #container {
@@ -186,6 +190,10 @@ and (max-device-width : 1024px) {
   .time_since {
     font-family: "HelveticaNeue-UltraLight";
   }
+
+  #facebook-iframe {
+    display: none;
+  }
 }
 
 @media only screen and (max-width:600px) {
@@ -201,7 +209,7 @@ and (max-device-width : 1024px) {
   #credits {
     font-family: "HelveticaNeue-UltraLight";
     font-size: 12px;
-    height: 75px;
+    height: 60px;
   }
 
   #credits a:link {text-decoration:none;}
@@ -256,5 +264,9 @@ and (max-device-width : 1024px) {
   .tweet_text {
     padding: 0;
     width: 80%;
+  }
+
+  #facebook-iframe {
+    display: none;
   }
 }
