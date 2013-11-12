@@ -33,7 +33,7 @@ function populateTweet(data) {
     diss = "understands why I built this site!";
   }  
 
-  var spans = '<span>' + data.split.join('</span> <span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + diss + '</span> <span class="time_since">' + timeAgo + '</span>';
+  var spans = '<span>' + data.split.join('</span>&nbsp;<span>') + '</span><br/><span class="screen_name">@' + data.user.screen_name + ' ' + diss + '</span>&nbsp;<span class="time_since">' + timeAgo + '</span>';
   $('#tweet').html("");
   $(spans).hide().appendTo('#tweet').each(function(i) {
     if($(this).text().startsWith("@") && !$(this).hasClass('screen_name')) {
